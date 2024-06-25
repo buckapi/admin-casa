@@ -40,7 +40,7 @@ export interface CardInterface {
 })
 export class DataApiService {
 	//ticket: Observable<any>;
-	private baseUrl = 'https://db.buckapi.com:8090/api';
+	private baseUrl = 'https://db.camiwa.com:8092/api';
 
 	url:any;
 	cards:any;
@@ -199,7 +199,7 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	updateColor(colorData: any, id: string): Observable<any> {
-		const url = `https://db.buckapi.com:8090/api/collections/svbConfig/records/${id}`;
+		const url = `https://db.camiwa.com:8092/api/collections/svbConfig/records/${id}`;
 		return this.http.patch(url, colorData).pipe(
 		  map(response => response)
 		);
@@ -210,7 +210,7 @@ export class DataApiService {
 	  }
 	productUpdate(clientData: any, id: string): Observable<any> {
 		// Construir la URL de la solicitud
-		const url = `https://db.buckapi.com:8090/api/collections/svbProducts/records/${id}`;
+		const url = `https://db.camiwa.com:8092/api/collections/svbProducts/records/${id}`;
 	
 		// Realizar la solicitud PATCH para actualizar el registro
 		return this.http.patch(url, clientData).pipe(

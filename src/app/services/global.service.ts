@@ -63,10 +63,10 @@ export class GlobalService {
   newImage:boolean=false;
   newUploaderImage:boolean=false;
 
-  private apirestUrl = "https://db.buckapi.com:8090/api/";
+  private apirestUrl = "https://db.camiwa.com:8092/api/";
   configs: Config[] = [];
 
-  pb = new PocketBase("https://db.buckapi.com:8090");
+  pb = new PocketBase("https://db.camiwa.com:8092");
   showDescriptionArray: boolean[] = [];
   idCatSelected = 0;
   idProductSelected = 0;

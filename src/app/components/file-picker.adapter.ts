@@ -13,7 +13,7 @@ import { GlobalService } from "@app/services/global.service";
 
 export class CustomFilePickerAdapter extends FilePickerAdapter {
   private uploadUrl =
-    "https://db.buckapi.com:8090/api/collections/svbImages/records";
+    "https://db.camiwa.com:8092/api/collections/casaGallery/records";
 
   constructor(
     private http: HttpClient,
@@ -86,7 +86,7 @@ export class CustomFilePickerAdapter extends FilePickerAdapter {
                   const imageUrl = response.id; // Obtener la URL de la imagen cargada desde la respuesta
                   this._butler.newImage = true;
                   let imageComplete =
-                    "https://db.buckapi.com:8090/api/files/" +
+                    "https://db.camiwa.com:8092/api/files/" +
                     response.collectionId +
                     "/" +
                     imageUrl +
