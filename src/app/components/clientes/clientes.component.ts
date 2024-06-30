@@ -261,11 +261,11 @@ showDeleteButton: boolean = false;
       icon: "warning",
       showCancelButton: true,
       text: "esta acción no se podrá revertir!",
-      title: "Seguro deseas borrar este producto?",
+      title: "Seguro deseas borrar?",
     }).then((result) => {
       if (result.value) {
         this.deleteProduct();
-        Swal.fire("Borrada!", "La autoparte ha sido borrada.", "success");
+        Swal.fire("Borrada!", "borrada.", "success");
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire("Cancelado", "", "error");
       }
@@ -309,7 +309,7 @@ showDeleteButton: boolean = false;
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Autoparte Actualizada",
+            title: "galeria Actualizada",
             showConfirmButton: false,
             timer: 1500,
           });
@@ -374,7 +374,7 @@ showDeleteButton: boolean = false;
       };
 
       this.global.editingProduct = false;
-      Swal.fire("Bien...", "Autoparte agregada satisfactoriamente!", "success");
+      Swal.fire("Bien...", "imagen guradada satisfactoriamente!", "success");
       this.global.editingProduct = false;
       this.global.addingProduct = false;
       this.global.loadProducts();
